@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+function showHint(str) {
+ if (str.length == 0) {
+ document.getElementById("txtHint").innerHTML = "";
+ return;
+ } else {
+ var xmlhttp = new XMLHttpRequest();
+ xmlhttp.onreadystatechange = function() {
+ if (this.readyState == 4 && this.status == 200) {
+ document.getElementById("txtHint").innerHTML = '<a href="http://localhost/gamemark/Catalogo/' + this.responseText + '/' + this.responseText + '.php">' + this.responseText + '</a>';
+ }
+ };
+ xmlhttp.open("GET", "busc.php?q=" + str, true);
+ xmlhttp.send();
+ }
+}
+</script>
+</head>
+<body>
+<p><b> Empiece a escribir un nombre en el campo de entrada que aparece
+a continuación:</b></p>
+<form>
+Nombre: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<href="#txtHint">Sugerencias: <span id="txtHint"></span></href>
+</body>
+</html>

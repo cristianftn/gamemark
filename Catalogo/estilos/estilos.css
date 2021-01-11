@@ -1,0 +1,344 @@
+body{
+	margin: 0;
+	padding:0;
+	background-color: #D0D6E0;
+}
+/*----------------------------------------------HEADER--------------------------------------------*/
+
+/*CONTENEDOR DE LOGO Y BUSCADOR*/
+.cabecera{
+width: 100%;
+height: 100%;
+display:flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+/*CONTENEDOR DE IMAGEN LOGO Y GIF*/
+.logo{
+display: flex;
+justify-content: center;
+}
+
+.logo img{
+max-width: 100%;
+height: 100%;
+}
+
+/*CONTENEDOR DEL BUSCADOR, EL CARRITO Y BOTONES DE LOGIN Y REGISTER*/
+.buscauser{
+/*min-width: 21%;
+min-height: 30%;*/ 
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+/*BUSCADOR*/
+#buscador{ 
+display: flex;
+max-width: 20%;
+padding-bottom: 1em;
+}
+
+.user{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+#carrito{
+max-width: 400px;
+}
+
+.auser{
+margin-bottom: 2%;
+display: inline-block;
+font-family:Arial, Helvetica, sans-serif;
+background-color:#000000;
+text-decoration: none;
+padding: 0 1.5em;
+border:solid 2px #7CBBFF;
+border-radius: 1.3em;
+color: #7CBBFF;
+line-height: 2.6em;
+font-size: .9em;
+text-transform: capitalize;	
+}
+
+.auser:hover{
+background-image: radial-gradient(#7CBBFF,#28AEEB,#006EB0);
+border-radius: 10px;
+border:solid 2px #000000;
+transition-duration: 0.8s;
+transition-delay: 0.1s;
+transition-timing-function: ease;
+color:#FFFFFF;
+}
+/*------------------------------------------FIN DEL HEADER----------------------------------------*/
+
+/*-----------------------------------------------NAV----------------------------------------------*/
+.menu{
+width: 100%;
+background-image: radial-gradient(#7CBBFF,#28AEEB,#006EB0);
+height:10%;
+display: flex;
+justify-content: center;
+flex-flow: column;
+box-shadow: 5px 5px 10px grey;
+}
+
+.menu ul{
+display:flex;
+flex-wrap: wrap;
+list-style: none;
+justify-content: center;
+}
+
+.menu ul li a{
+text-decoration: none;
+color: #FEFEFE;
+font-size: 20px;
+font-family: "Verdana", Helvetica, Arial, "sans-serif" ;
+line-height: 3.4;
+text-transform: uppercase;
+font-weight: bold;
+padding: 10px 30px;
+transition-duration: 0.8s;
+transition-delay: 0.1s;
+transition-timing-function: ease;
+}
+
+.menu ul li a:hover{
+background-color:#000000;
+border-radius: 10px;
+border:solid 2px #ffffff;
+transition-duration: 0.8s;
+transition-delay: 0.1s;
+transition-timing-function: ease;
+}
+/*-------------------------------------------FIN DEL NAV------------------------------------------*/
+
+/*CONTENEDOR PRINCIPAL DEL TITULO, TODOS LOS PARRAFOS, IMAGENES, VIDEO Y PUNTUACION*/
+.principal{
+display: flex;
+width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+/*IMAGEN PORTADA DE ANCHO TOTAL*/
+.imagencuphead{
+width:100%;
+}
+
+.imagencuphead img{
+width: 100%;
+}
+
+.titulo{
+display: flex;
+justify-content: center;
+width: 100%;
+border-bottom: 4px solid #000000;
+}
+
+.titulo h1{
+text-align: center;
+font-size: 42px;
+font-weight: bold;
+font-family: verdana;	
+}
+
+/*CONTENEDOR CON 70% DE ANCHURA Y FONDO DEGRADADO*/
+.fondoazul{
+width: 70%;
+background-image: radial-gradient(#7CBBFF,#28aeed,#006EB0);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 19px;
+box-shadow: 5px 5px 10px grey;
+margin-top: 3%;
+margin-bottom: 3%;
+}
+
+.fondoazul h1{
+text-align: center;
+font-size: 30px;
+font-weight: bold;
+font-family: verdana;
+color: #FFFFFF;
+}	
+
+/*CLASE COMUN A TODOS LOS PARRAFOS DE LA PAGINA*/
+.parrafo{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 90%;
+align-items: center;
+padding: 1% 2% 1% 2%;
+color: #FFFFFF;
+font-family: 'Verdana';
+line-height: 25px;
+border-radius: 19px;
+text-align: justify;
+}
+
+.parrafo img{
+display: flex;
+height: 35%;
+width: 61%;
+}
+
+.parrafo iframe{
+width: 30vw;
+height: 20vw;
+}/*FIN DE PARRAFO*/
+						
+/*PUNTUACION DEL VIDEOJUEGO*/
+.barranegra{/*CONTENEROR DE LOS 3 ELEMENTOS*/
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+align-content: center;
+min-width: 90%;
+height: 100%;
+background-color: black;
+border-radius: 19px;
+color: #fff;
+}
+
+.circulo{ /*IMAGEN*/
+display: flex;
+justify-content: flex-start;
+min-width: 33%;
+}
+
+.circulo img{
+z-index: 1;
+width: 9em;
+height: 9em;
+border: 4px solid #fff;
+border-radius:150px;
+background-color: #fff;
+}
+
+.valoracion{ /*TEXTO*/
+display: flex;
+min-width: 33%;
+font-size: 3em;
+color: white;
+text-align: center;
+}
+
+.nota{ /*NUMERO*/
+display: inline-block;
+min-width: 10%;
+text-align: center;
+font-size: 2.5em;
+border: 4px solid #7CBBFF;
+border-radius:200px;
+background-color: #fff;
+color: #7CBBFF;
+margin:2%;
+} /*FIN DE PUNTUACION*/
+
+/*CONTENEDOR PARA EL ENDING QUE INCLUYE proscontras y datos*/
+.ending{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 70%;
+align-items: center;
+padding: 2%;
+color: #FFFFFF;
+font-family: 'Verdana';
+border-top: 4px solid #000000;
+}
+
+.ending img{
+height: 35%;
+width: 61%;
+}
+
+.proscontras{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+align-items: center;
+color: #FFFFFF;
+font-family: 'Verdana';
+border-bottom: 4px solid #000000;
+margin-bottom: 2%;
+}
+
+.datos{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+align-items: center;
+color: #FFFFFF;
+font-family: 'Verdana';
+}
+
+/*----------------------------------------------FOOTER--------------------------------------------*/	
+
+footer{
+width: 100%;
+align-self: flex-end;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 2px solid black;
+background-image: radial-gradient(#7CBBFF,#28aeed,#006EB0);
+}
+
+.redes{
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.redes img{
+display: flex;
+width: 3em;
+height: 3em;
+padding: 1vh;
+}
+
+.redes a{
+display: flex;
+justify-content: center;
+}
+
+.redes p{
+display: flex;
+justify-content: center;		
+}
+
+#iconotwitter{
+display: flex;
+}
+
+#iconofacebook{
+display: flex;
+}
+
+#iconoinsta{
+display: flex;
+}
+
+#iconogoogle{
+display: flex;
+}
+
