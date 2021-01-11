@@ -2,12 +2,12 @@
 <?php 
 
 
-$videojuego = mysql_query("SELECT v.*, vc.* FROM videojuegos v JOIN videojuego_caracteristicas vc ON v.id_videojuego = vc.id_videojuego WHERE v.Nombre='Cuphead'",$conexion);
-$atributos = mysql_query("SELECT * FROM videojuegos v JOIN videojuego_atributos va ON  v.id_videojuego = va.id_videojuego WHERE v.Nombre = 'Cuphead'");
-$pros = mysql_query("SELECT * FROM videojuegos v JOIN videojuego_pros_contras vpc  ON v.id_videojuego = vpc.id_videojuego WHERE v.Nombre = 'Cuphead' AND vpc.Tipo_pro_contra = 'pro'");
-$contras = mysql_query("SELECT * FROM videojuegos v JOIN videojuego_pros_contras vpc  ON v.id_videojuego = vpc.id_videojuego WHERE v.Nombre = 'Cuphead' AND vpc.Tipo_pro_contra = 'contra'");
+$videojuego = mysqli_query($conexion, "SELECT v.*, vc.* FROM videojuegos v JOIN videojuego_caracteristicas vc ON v.id_videojuego = vc.id_videojuego WHERE v.Nombre='Cuphead'");
+$atributos = mysqli_query($conexion, "SELECT * FROM videojuegos v JOIN videojuego_atributos va ON  v.id_videojuego = va.id_videojuego WHERE v.Nombre = 'Cuphead'");
+$pros = mysqli_query($conexion, "SELECT * FROM videojuegos v JOIN videojuego_pros_contras vpc  ON v.id_videojuego = vpc.id_videojuego WHERE v.Nombre = 'Cuphead' AND vpc.Tipo_pro_contra = 'pro'");
+$contras = mysqli_query($conexion, "SELECT * FROM videojuegos v JOIN videojuego_pros_contras vpc  ON v.id_videojuego = vpc.id_videojuego WHERE v.Nombre = 'Cuphead' AND vpc.Tipo_pro_contra = 'contra'");
 
-$videojuego = mysql_fetch_array($videojuego);
+$videojuego = mysqli_fetch_array($videojuego);
 
  ?>
 <!DOCTYPE html>
@@ -101,10 +101,10 @@ $videojuego = mysql_fetch_array($videojuego);
             <img src="<?php echo utf8_encode($videojuego["Imagen_4"]);?>">
             <div class="proscontras">
                 <?php  
-                  while ($pro = mysql_fetch_array($pros)) {
+                  while ($pro = mysqli_fetch_array($pros)) {
                         echo "<p>" . utf8_encode($pro["Texto"]) . "</p>";
                     }  
-                  while ($contra = mysql_fetch_array($contras)) {
+                  while ($contra = mysqli_fetch_array($contras)) {
                         echo "<p>" . utf8_encode($contra["Texto"]) . "</p>";
                     }
                 ?>
@@ -112,7 +112,7 @@ $videojuego = mysql_fetch_array($videojuego);
             </div>
             <div class="datos">
                 <?php 
-                    while ($atributo = mysql_fetch_array($atributos)) {
+                    while ($atributo = mysqli_fetch_array($atributos)) {
                         
                         echo "<p><i class='" . $atributo['Icono'] . "''></i>&nbsp;";
                         echo utf8_encode($atributo['Tipo_atributo'] . ": " . $atributo['Valor_atributo'] . "</p>"); 
